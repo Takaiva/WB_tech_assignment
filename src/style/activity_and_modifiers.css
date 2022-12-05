@@ -1,0 +1,93 @@
+input[type="checkbox"]:hover,
+button:hover,
+label:hover,
+.toggle-btn:hover,
+.tooltip-call:hover {
+    cursor: pointer;
+}
+.header__search_hover:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header__search_active {
+    background-color: rgb(255, 255, 255);
+}
+
+.search__input:focus-visible {
+    outline: 0;
+    /*background-color: rgba(255, 255, 255, 0.9);*/
+}
+
+.search__input:focus {
+    color: black;
+}
+
+._icon-search:hover:before {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.search__icon_active:before {
+    color: gray;
+}
+
+.basket-section__hidden {
+    display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button:active {
+    color: #F55123;
+}
+
+.order-details__addressee__input:focus {
+    outline: none;
+}
+
+.order-details__addressee__input:focus ~ .floating-label {
+    top: -8px;
+}
+
+.order-details__addressee__input:not(:placeholder-shown) ~ .floating-label {
+    top: -8px;
+}
+
+.accordion_opened .arrow::before {
+    transform: rotate(-45deg);
+}
+
+.accordion_opened .arrow::after {
+    transform: rotate(45deg);
+}
+
+.arrow::before,
+.arrow::after {
+    position: relative;
+    content: '';
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+    width: 10px;
+    height: 1px;
+    background: #A0A0A4;
+    transition: 0.3s ease-in-out;
+}
+
+.arrow::before {
+    transform: rotate(45deg);
+}
+
+.arrow::after {
+    left: 6px;
+    top: -1px;
+    transform: rotate(-45deg);
+}
+
+.modal-window__delivery-options > div:hover {
+    border: 2px solid #CB11AB;
+    cursor: pointer;
+}

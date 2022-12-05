@@ -1,0 +1,254 @@
+@media (max-width: 1024px) {
+    ._container {
+        padding: 0 16px;
+    }
+    .main__content {
+        flex-direction: column;
+    }
+    .basket__sidebar {
+        width: 100%;
+    }
+    .basketContent {
+        width: 100%;
+    }
+    .navbar-mobile {
+        display: flex;
+    }
+    .basket-section__order-details.order-details {
+        width: 100vw;
+        position: relative;
+        left: calc(-50vw + 50%);
+    }
+    .sidebar-form {
+        background: none;
+        box-shadow: none;
+        width: 100vw;
+        position: relative;
+        left: calc(-50vw + 50%);
+    }
+
+    .free-refund,
+    .sb-payments__payment-options {
+        background: #F0ECF4;
+    }
+    /* test */
+    .header {
+        height: 80px;
+    }
+    .footer {
+        height: 88px;
+    }
+    .header__content {
+        height: 56px;
+    }
+    .header__search {
+        display: none;
+    }
+    .header__menu {
+        display: none;
+    }
+    .header__logo {
+        width: 100%;
+    }
+    .logo__name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .mobile-search {
+        display: inline;
+    }
+    ._icon-menu {
+        display: none;
+    }
+    .mobile-burger {
+        display: inline;
+    }
+    .logo__icon {
+        width: auto;
+        border: 0;
+    }
+    .sidebar-delivery__details {
+        display: none;
+    }
+    .sb-payments__payment-details {
+        display: none;
+    }
+    .out-of-stock .item-info__store {
+        display: none;
+    }
+    .in-stock .item-info__store__rights {
+        display: none;
+    }
+    .form__select > div {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .good-label__item-info {
+        font-size: var(--font-size-14);
+    }
+    .count__input-number {
+        max-width: 80px;
+    }
+    .count__input-number *,
+    count__quantity-number {
+        font-size: var(--font-size-14);
+    }
+    .good-price__new-price {
+        font-size: var(--font-size-base);
+    }
+/*---    in stock items sections    ---*/
+/*change block location*/
+    .good-quantity {
+        display: none;
+    }
+    .count-mobile {
+        display: block;
+    }
+    .good-price-mobile {
+        display: flex;
+    }
+/*change block location*/
+    .order-item {
+        flex-direction: column;
+        /*gap: 0;*/
+    }
+    .good-price-mobile {
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+    }
+    .good-price__old-price {
+        line-height: normal;
+    }
+    .count__wrap {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: none;
+        height: auto;
+        gap: 16px;
+    }
+    .item-info__additional-info {
+        margin-top: 8px;
+    }
+    .item-info__store {
+        height: auto;
+        padding-top: 8px;
+    }
+    .item-info {
+        gap: 0;
+        max-width: none;
+    }
+    .item-info > p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .count {
+        width: 100%;
+    }
+    .order-item__good-quantity__additional-options {
+        margin-right: 14px;
+    }
+/*---    in stock items sections    ---*/
+
+/*--- out of stock items sections   ---*/
+    .out-of-stock .order-item {
+        position: relative;
+    }
+    .out-of-stock .good-quantity {
+        display: block;
+        right: 0px;
+        position: absolute;
+        margin-right: 0px;
+        bottom: 0;
+    }
+
+/* mobile checkboxes */
+    .good-label__checkbox {
+        position: relative;
+    }
+    .checkbox-container {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    }
+    .good-label__checkbox {
+        align-items: flex-start;
+    }
+    img {
+        width: 80px;
+        height: 106px;
+    }
+/* mobile checkboxes */
+
+/* delivery section */
+    .delivery {
+        height: auto;
+    }
+    .delivery__info__methods.methods {
+        height: auto;
+    }
+    .delivery__info {
+        gap: 8px;
+    }
+    .methods__costs,
+    .methods__address {
+        flex-direction: column;
+        gap: 0;
+    }
+    .methods__data {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .methods__data img {
+        width: 41px;
+        height: 56px;
+    }
+
+    .order-details__delivery > div {
+        padding: 0 16px;
+    }
+    .order-details__payments,
+    .order-details__addressee,
+    .basket__sidebar__sidebar-form {
+        padding: 16px 16px 24px;
+    }
+
+}
+
+@media (max-width: 672px) {
+    /*
+    When screen width is 1025px, .order-details__addressee__body is 624px length –
+    that is the maximum for double row presentation of this section.
+    In mobile mode (vertical) when screen width is 672, .order-details__addressee__body
+    is 624px length as well.
+    That's why I change the .order-details__addressee__body presentation from row to column
+    only when the width crosses the width limit of 627 px.
+     */
+    .order-details__addressee__body > div {
+        flex-direction: column;
+    }
+    .order-details__addressee__body > div:first-child {
+        gap: 0;
+    }
+    .logo {
+        font-size: var(--font-size-26);
+    }
+    .basketContent__header {
+        font-size: var(--font-size-20);
+    }
+    .content-header {
+        font-size: var(--font-size-20);
+        line-height: 28px;
+    }
+    .good-price__new-price {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* help......... */

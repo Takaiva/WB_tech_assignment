@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'icons';
+    src:
+            url('../fonts/icons.ttf?wnzrf5') format('truetype'),
+            url('../fonts/icons.woff?wnzrf5') format('woff'),
+            url('../fonts/icons.svg?wnzrf5#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-bin:before {
+    content: "\e900";
+}
+._icon-modal-bin:before {
+    content: "\e900";
+    color: #A0A0A4;
+}
+._icon-menu:before {
+    content: "\e908";
+    color: #fff;
+}
+._icon-heart:before {
+    content: "\e902";
+}
+._icon-basket:before {
+    content: "\e904";
+    color: #fff;
+    font-size: 23px;
+}
+._icon-pen:before {
+    content: "\e905";
+    color: #cb11ab;
+}
+._icon-profile:before {
+    content: "\e906";
+    color: #fff;
+    font-size: 20px;
+}
+._icon-search:before {
+    content: "\e907";
+    color: #fff;
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+._icon-search-mobile:before {
+    content: "\e907";
+    color: #fff;
+    opacity: 1;
+    font-size: 20px;
+}
+
+._icon-mobile-burger:before {
+    content: "\e90e";
+    color: #fff;
+    font-size: 19px;
+}
+
+._icon-mir .path1:before {
+    content: "\e901";
+    color: rgb(49, 155, 66);
+    font-size: 11px;
+}
+._icon-mir .path2:before {
+    content: "\e903";
+    margin-left: -3em;
+    color: rgb(49, 155, 66);
+    font-size: 11px;
+}
+._icon-mir .path3:before {
+    content: "\e909";
+    margin-left: -3em;
+    color: rgb(49, 155, 66);
+    font-size: 11px;
+}
+._icon-mir .path4:before {
+    content: "\e90a";
+    margin-left: -3em;
+    color: #009ADD;
+    font-size: 11px;
+}
+
+._icon-cross:before {
+    content: "\e916";
+    color: #A0A0A4;
+}
+._icon-cross:hover {
+    cursor: pointer;
+}
+
+._icon-refund_allowed:before {
+    content: "\e90b";
+    font-size: 22px;
+    color: #0CD38B;
+}
+._icon-star:before {
+    content: "\e90c";
+    color: #ff970d;
+}
+
+._icon-checked:before {
+    content: "\e90d";
+    color: #fff;
+    font-size: 12px;
+}
+
+._icon-nav-cart-mobile:before {
+    content: "\e915";
+    color: #cb11ab;
+    font-size: 28px;
+}
+._icon-nav-heart-mobile:before {
+    content: "\e90f";
+    color: #ccc;
+    font-size: 28px;
+}
+._icon-nav-home-mobile:before {
+    content: "\e910";
+    color: #ccc;
+    font-size: 28px;
+}
+._icon-nav-profile-mobile:before {
+    content: "\e911";
+    color: #ccc;
+    font-size: 28px;
+}
+._icon-nav-search-mobile .path1:before {
+    content: "\e912";
+    color: transparent;
+    font-size: 28px;
+}
+._icon-nav-search-mobile .path2:before {
+    content: "\e913";
+    margin-left: -1em;
+    color: rgb(204, 204, 204);
+    font-size: 28px;
+}
+._icon-nav-search-mobile .path3:before {
+    content: "\e914";
+    margin-left: -1em;
+    color: rgb(204, 204, 204);
+    font-size: 28px;
+}
+
+._icon-bin:hover:before,
+._icon-modal-bin:hover:before {
+    color: #F55123;
+    cursor: pointer;
+}
+
+._icon-heart:hover:before{
+    color: #CB11AB;
+    cursor: pointer;
+}
+
+._icon-heart:active:before,
+._icon-bin:active:before,
+._icon-modal-bin:active:before {
+    color: black;
+}
