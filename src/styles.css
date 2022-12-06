@@ -1459,14 +1459,14 @@ input[type="checkbox"]:checked + label.checkbox-label::before {
     font-size: 20px;
     line-height: 28px;
 }
-    modal-window__backdrop {
+.modal-window__backdrop {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
-    }
+}
 
 .show {
     transform: translate(-50%, -50%) scale(1);
@@ -1474,7 +1474,7 @@ input[type="checkbox"]:checked + label.checkbox-label::before {
     visibility: visible;
 }
 .hidden {
-    display: block;
+    display: none;
 }
 
 .modal-window__body {
