@@ -17,6 +17,8 @@ export default () => {
     postcode: document.getElementById('postcode'),
   };
 
+  const bins = document.querySelectorAll('._icon-bin');
+
   const items = [{
         id: 1,
         name: 'Футболка UZcotton мужская',
@@ -44,7 +46,6 @@ export default () => {
 
   const initialState = {
     items: [],
-    totalCost: null,
     errors: {
       firstname: '',
       lastname: '',
@@ -151,6 +152,20 @@ export default () => {
         }
       })
       state.items = items;
+    })
+  })
+
+
+  bins.forEach((bin) => {
+    bin.addEventListener('click', (e) => {
+      const target = e.target;
+      const parent = target.closest('div.order-item');
+      const id = Number(parent.dataset.itemId);
+      const items = _.clone(state.items);
+      const newItems = items.filter(item => item.id !== id);
+      console.log(newItems);
+      state.items = newItems;
+      parent.style.display = 'none';
     })
   })
 };

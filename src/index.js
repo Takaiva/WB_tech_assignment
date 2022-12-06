@@ -19,6 +19,7 @@ const totalCost = document.querySelector('.costs__total__sum');
 const refundFreeElements = document.querySelectorAll('.refund-free_text');
 
 
+
 let tooltipElem;
 // add tooltip
 document.onmouseover = function (event) {
