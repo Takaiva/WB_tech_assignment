@@ -96,6 +96,30 @@
     font-size: 11px;
 }
 
+._icon-mir-m .path1:before {
+    content: "\e901";
+    color: rgb(49, 155, 66);
+    font-size: 9px;
+}
+._icon-mir-m .path2:before {
+    content: "\e903";
+    margin-left: -3em;
+    color: rgb(49, 155, 66);
+    font-size: 9px;
+}
+._icon-mir-m .path3:before {
+    content: "\e909";
+    margin-left: -3em;
+    color: rgb(49, 155, 66);
+    font-size: 9px;
+}
+._icon-mir-m .path4:before {
+    content: "\e90a";
+    margin-left: -3em;
+    color: #009ADD;
+    font-size: 9px;
+}
+
 ._icon-cross:before {
     content: "\e916";
     color: #A0A0A4;
@@ -173,4 +197,70 @@
 ._icon-bin:active:before,
 ._icon-modal-bin:active:before {
     color: black;
+}
+
+._icon-master1 .path1:before {
+    content: "\e917";
+    color: #f6f6fa;
+    font-size: 20px;
+}
+._icon-master1 .path2:before {
+    content: "\e918";
+    color: #f79410;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
+}
+._icon-master1 .path3:before {
+    content: "\e919";
+    color: #ff5f00;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
+}
+._icon-master1 .path4:before {
+    content: "\e91a";
+    color: #eb001b;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
+}
+._icon-master1 .path5:before {
+    content: "\e91b";
+    color: #f79410;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
+}
+
+._icon-master2 .path1:before {
+    content: "\e91c";
+    color: #f6f6fa;
+    font-size: 20px;
+}
+._icon-master2 .path2:before {
+    content: "\e91d";
+    color: #6c6bbd;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
+}
+._icon-master2 .path3:before {
+    content: "\e91e";
+    color: #eb001b;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
+}
+._icon-master2 .path4:before {
+    content: "\e91f";
+    color: #0099df;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
+}
+
+._icon-visa .path1:before {
+    content: "\e920";
+    color: #f6f6fa;
+    font-size: 20px;
+}
+._icon-visa .path2:before {
+    content: "\e921";
+    color: #1434cb;
+    margin-left: -1.2802734375em;
+    font-size: 20px;
 }

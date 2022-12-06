@@ -249,6 +249,17 @@
     .good-price__new-price {
         font-size: var(--font-size-base);
     }
+    #modal_1,
+    #modal_2{
+        width: 320px;
+    }
+    #modal_1 {
+        height: 594px;
+    }
+    .modal-footer > a {
+        width: 100%;
+    }
+
 }
 
 /* help......... */
