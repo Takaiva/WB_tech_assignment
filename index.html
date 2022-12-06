@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="form__select basket-section__in-stock__tools">
 <!--                                        t-shirt-->
-                                        <div class="form__select__order-item order-item">
+                                        <div class="form__select__order-item order-item" data-item-id="1">
                                             <div class="order-item__good-label good-label">
                                                     <div class="good-label__checkbox">
                                                         <div class="checkbox-container">
@@ -162,7 +162,7 @@
                                             </div>
                                         </div>
 <!--                                        case-->
-                                        <div class="form__select__order-item order-item">
+                                        <div class="form__select__order-item order-item" data-item-id="2">
                                             <div class="order-item__good-label good-label">
                                                     <div class="good-label__checkbox">
                                                         <div class="checkbox-container">
@@ -209,7 +209,7 @@
                                                     <div class="count__wrap">
                                                         <div class="count__input-number">
                                                             <button type="button" class="count__minus minus">–</button>
-                                                            <input type="number" class="count__quantity-number" data-item-id="3" autocomplete="off" maxlength="2" min="1" value="200">
+                                                            <input type="number" class="count__quantity-number" data-item-id="2" autocomplete="off" maxlength="2" min="1" value="200">
                                                             <button type="button" class="count__plus plus">+</button>
                                                         </div>
                                                         <div class="order-item__good-quantity__additional-options">
@@ -243,7 +243,7 @@
                                             </div>
                                         </div>
 <!--                                        pencils-->
-                                        <div class="form__select__order-item order-item">
+                                        <div class="form__select__order-item order-item" data-item-id="3">
                                             <div class="order-item__good-label good-label">
                                                     <div class="good-label__checkbox">
                                                         <div class="checkbox-container">
@@ -287,7 +287,7 @@
                                                     <div class="count__wrap">
                                                         <div class="count__input-number">
                                                             <button type="button" class="count__minus minus">–</button>
-                                                            <input type="number" class="count__quantity-number" data-item-id="2" readonly maxlength="2" min="1" value="2">
+                                                            <input type="number" class="count__quantity-number" data-item-id="3" readonly maxlength="2" min="1" value="2">
                                                             <button type="button" class="count__plus plus">+</button>
                                                         </div>
                                                         <p class="count__remaining">Осталось 2 шт.</p>
@@ -722,18 +722,22 @@
             <div class="modal-window__pay-cards">
                 <div class="mir">
                     <input type="radio" name="card" id="mir">
+                    <span class="_icon-mir-m"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
                     <label for="mir">1234 56•• •••• 1234</label>
                 </div>
                 <div class="visa">
                     <input type="radio" name="card" id="visa">
+                    <span class="_icon-visa"><span class="path1"></span><span class="path2"></span></span>
                     <label for="visa">1234 56•• •••• 1234</label>
                 </div>
                 <div class="master1">
                     <input type="radio" name="card" id="master1">
+                    <span class="_icon-master1"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
                     <label for="master1">1234 56•• •••• 1234</label>
                 </div>
                 <div class="master2">
                     <input type="radio" name="card" id="master2">
+                    <span class="_icon-master2"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
                     <label for="master2">1234 56•• •••• 1234</label>
                 </div>
             </div>
