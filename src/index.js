@@ -19,7 +19,6 @@ const totalCost = document.querySelector('.costs__total__sum');
 const refundFreeElements = document.querySelectorAll('.refund-free_text');
 
 
-
 let tooltipElem;
 // add tooltip
 document.onmouseover = function (event) {
@@ -112,6 +111,18 @@ checkboxes.forEach((checkbox) => {
     console.log(e.target, e.target.id);
     if (e.target.id == 'pay-instant') {
       buttonOrder.textContent = e.target.checked ? `Оплатить ${totalCost.textContent}` : 'Заказать';
+    }
+    if (e.target.id === 'select-all') {
+      checkboxes.forEach((checkbox) => {
+        if (checkbox.id === 'pay-instant') {
+          return;
+        }
+        if (e.target.checked) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      })
     }
   });
 });
