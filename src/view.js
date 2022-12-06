@@ -43,6 +43,7 @@ export default (elements, state) => (path, value) => {
     case 'items':
       let total = 0;
       let totalNoDiscount = 0;
+      //setup data for the counters
       value.forEach(({id, name, oldPrice, newPrice, quantity, currency}) => {
         const parentNode = document.querySelector(`div[data-item-id="${id}"]`);
         const newPriceNode = parentNode.querySelectorAll('.good-price__new-price');
@@ -78,6 +79,8 @@ export default (elements, state) => (path, value) => {
 
       break;
     case 'errors': //show input feedback errors
+
+        // render when push order button
       const inputIds = Object.keys(formInputs);
       inputIds.forEach((key) => {
         if (value[key] === '') {
@@ -90,7 +93,7 @@ export default (elements, state) => (path, value) => {
           if (existingNode) existingNode.remove();
         }
       });
-
+      //render when stop typing
       const arrayErrors = Object.entries(value);
       arrayErrors.forEach(([inputId, message]) => {
         if (message !== '') {
@@ -111,6 +114,7 @@ export default (elements, state) => (path, value) => {
         }
       });
 
+      // render when having error feedback and while typing
       Object.entries(formInputs).forEach(([inputId, input]) => {
         input.addEventListener('input', (e) => {
           const parent = document.querySelector(`.order-details__addressee__${inputId}`);
