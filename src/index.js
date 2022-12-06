@@ -227,21 +227,18 @@ function mask(event) {
   if (event.type == 'blur' && this.value.length < 5) this.value = '';
 }
 
-const inp = document.querySelector('#phone');
+const telInp = document.querySelector('#phone');
 
-inp.addEventListener('input', mask, false);
-inp.addEventListener('focus', mask, false);
-inp.addEventListener('blur', mask, false);
-inp.addEventListener('keydown', mask, false);
-
-inp.addEventListener('input', (e) => {
-  console.log(e.target.value.length);
-});
+telInp.addEventListener('input', mask, false);
+telInp.addEventListener('focus', mask, false);
+telInp.addEventListener('blur', mask, false);
+telInp.addEventListener('keydown', mask, false);
 
 const backdrop = document.querySelector('#modal-backdrop');
 document.addEventListener('click', modalHandler);
 
 function modalHandler(evt) {
+  evt.preventDefault()
   const modalBtnOpen = evt.target.closest('.js-modal');
   if (modalBtnOpen) {
     const modalSelector = modalBtnOpen.dataset.modal;
