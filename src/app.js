@@ -80,6 +80,7 @@ export default () => {
     return schema.validate(value);
   };
 
+// validate all input fields at once when pressing "ORDER" button
   elements.form.addEventListener('submit', (e) => {
     e.preventDefault();
     const newErrors = {
@@ -99,7 +100,7 @@ export default () => {
         state.errors = newErrors;
       });
   });
-
+// validate the exact one input field when user stops typing
   Object.values(formInputs).forEach((input) => {
     input.addEventListener('change', (e) => {
       e.preventDefault();
@@ -122,6 +123,7 @@ export default () => {
 
   const plusCount = document.querySelectorAll('.plus');
   const minusCount = document.querySelectorAll('.minus');
+  // remove -1 item
   minusCount.forEach((button) => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
@@ -139,6 +141,7 @@ export default () => {
       state.items = items;
     })
   })
+  // add +1 item
   plusCount.forEach((button) => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
@@ -155,7 +158,7 @@ export default () => {
     })
   })
 
-
+// remove item from cart
   bins.forEach((bin) => {
     bin.addEventListener('click', (e) => {
       const target = e.target;
