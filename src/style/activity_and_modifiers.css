@@ -2,7 +2,8 @@ input[type="checkbox"]:hover,
 button:hover,
 label:hover,
 .toggle-btn:hover,
-.tooltip-call:hover {
+.tooltip-call:hover,
+._icon-pen:hover {
     cursor: pointer;
 }
 .header__search_hover:hover {
