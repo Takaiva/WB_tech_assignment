@@ -23,10 +23,26 @@ export default (elements, state) => (path, value) => {
     postcode: document.getElementById('postcode'),
   };
 
+  const getPriceWithIndent = (value) => {
+    const stringNumbs = [...value.toString()].reverse();
+    let counter = 0;
+    const result = [];
+    stringNumbs.forEach((num) => {
+      result.push(num);
+      counter += 1;
+      if (counter === 3) {
+        result.push(' ');
+        counter = 0;
+      }
+    });
+    return result.reverse().join('');
+  }
+
 
   switch (path) {
     case 'items':
       let total = 0;
+      let totalNoDiscount = 0;
       value.forEach(({id, name, oldPrice, newPrice, quantity, currency}) => {
         const parentNode = document.querySelector(`div[data-item-id="${id}"]`);
         const newPriceNode = parentNode.querySelectorAll('.good-price__new-price');
@@ -44,21 +60,20 @@ export default (elements, state) => (path, value) => {
         const quantityNode = parentNode.querySelector('input.count__quantity-number');
         quantityNode.value = quantity;
         total += price;
+        totalNoDiscount += oldPriceNum;
       })
       const totalCostsEl = document.querySelector('.costs__total__sum');
-      let counter = 0;
-      const stringNums = [...total.toString()].reverse();
-      const result = [];
-      stringNums.forEach((num) => {
-        result.push(num);
-        counter += 1;
-        if (counter === 3) {
-          result.push(' ');
-          counter = 0;
-        }
-      });
-      const totalWithIndent = result.reverse().join('');
+      const totalWithIndent = getPriceWithIndent(total);
       totalCostsEl.innerHTML = `${totalWithIndent}&nbsp;сом`;
+
+      const totalWithoutDiscountEl = document.querySelector('.costs__total__no-discount');
+      const totalNoDiscountPrice = getPriceWithIndent(totalNoDiscount);
+      totalWithoutDiscountEl.innerHTML = `${totalNoDiscountPrice}&nbsp;сом`;
+
+      const totalPriceDiffEl = document.querySelector('.costs__details__total-discount');
+      const diff = getPriceWithIndent(totalNoDiscount - total);
+      totalPriceDiffEl.innerHTML = `–${diff}&nbsp;сом`;
+
       break;
     case 'errors': //show input feedback errors
       const inputIds = Object.keys(formInputs);
