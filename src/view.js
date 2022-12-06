@@ -49,13 +49,15 @@ export default (elements, state) => (path, value) => {
         const price = newPrice * quantity;
         newPriceNode.forEach((node) => {
           const newPriceEl = node.querySelector('p');
-          newPriceEl.innerHTML = `${price}&nbsp;`;
+          const priceWithIndents = getPriceWithIndent(price);
+          newPriceEl.innerHTML = `${priceWithIndents}&nbsp;`;
         });
         const oldPriceNode = parentNode.querySelectorAll('.good-price__old-price');
         const oldPriceNum = oldPrice * quantity;
         oldPriceNode.forEach((node) => {
           const oldPriceEl = node.querySelector('span');
-          oldPriceEl.innerHTML = `${oldPriceNum}&nbsp;сом`;
+          const oldPriceWithIndents = getPriceWithIndent(oldPriceNum);
+          oldPriceEl.innerHTML = `${oldPriceWithIndents}&nbsp;сом`;
         })
         const quantityNode = parentNode.querySelector('input.count__quantity-number');
         quantityNode.value = quantity;
