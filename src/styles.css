@@ -1436,7 +1436,7 @@ input[type="checkbox"]:checked + label.checkbox-label::before {
     height: 408px;
     max-width: 95%;
     min-height: 200px;
-    transition: all .18s ease-in-out;
+    transition: transform .28s ease-in-out;
     visibility: hidden;
     opacity: 0;
     background: #FFFFFF;
