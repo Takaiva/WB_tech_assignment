@@ -36,14 +36,14 @@ document.onmouseover = function (event) {
   if (target.hasAttribute('data-tooltip-type')) {
     tooltipElem.classList.add(`tooltip__${target.dataset.tooltipType}`);
   }
-  if (target.dataset.tooltipType === 'store-rights') {
+   if (target.dataset.tooltipType === 'store-rights') {
     const complexTooltipText = target.dataset.tooltipText.split('br');
     complexTooltipText.forEach((string) => {
       const innerElem = document.createElement('p');
       innerElem.textContent = string;
       tooltipElem.append(innerElem);
     });
-  } if (target.dataset.tooltipType === 'old-price') {
+  } else if (target.dataset.tooltipType === 'old-price') {
     const complexTooltipText = target.dataset.tooltipText.split('br');
     const [text1, val1, text2, val2] = complexTooltipText;
     const innerElem1 = document.createElement('div');
@@ -237,8 +237,17 @@ telInp.addEventListener('keydown', mask, false);
 const backdrop = document.querySelector('#modal-backdrop');
 document.addEventListener('click', modalHandler);
 
-function modalHandler(evt) {
-  evt.preventDefault()
+function showModal(modalElem) {
+  modalElem.classList.add('show');
+  backdrop.classList.remove('hidden');
+}
+
+function hideModal(modalElem) {
+  modalElem.classList.remove('show');
+  backdrop.classList.add('hidden');
+}
+
+function modalHandler (evt) {
   const modalBtnOpen = evt.target.closest('.js-modal');
   if (modalBtnOpen) {
     const modalSelector = modalBtnOpen.dataset.modal;
@@ -257,14 +266,6 @@ function modalHandler(evt) {
   }
 }
 
-function showModal(modalElem) {
-  modalElem.classList.add('show');
-  backdrop.classList.remove('hidden');
-}
 
-function hideModal(modalElem) {
-  modalElem.classList.remove('show');
-  backdrop.classList.add('hidden');
-}
 
 runApp();
